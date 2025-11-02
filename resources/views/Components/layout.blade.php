@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full bg-gray-100">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
     {{-- @vite('resources/css/app.css') --}}
 
 </head>
-<body>
+<body class="h-full">
 <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
 <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
 <!--
