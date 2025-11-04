@@ -32,6 +32,11 @@ return  $jobs = [
 
 public static function find(int $id): array
 {
-   return Arr::first(static::all(), fn($job) => $job['id'] == $id);
+   $job = Arr::first(static::all(), fn($job) => $job['id'] == $id);
+
+   if (!$job) {
+       abort(404);
+   }
+    return $job;
 }
 }
