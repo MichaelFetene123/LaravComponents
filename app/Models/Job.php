@@ -14,7 +14,7 @@ return  $jobs = [
             'id' => 1,
             'title' => 'laravel developer',
         'salary' => '1500$',
-        'location' => 'remote',
+        
         ],
         [
             'id' => 2,
