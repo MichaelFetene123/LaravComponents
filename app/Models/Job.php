@@ -2,41 +2,46 @@
 
 namespace App\Models;
 
-use Illuminate\Support\Arr;
+use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Support\Arr;
 
-class Job {
-    public static function all():array
-     {
-        
-return  $jobs = [
+class Job extends Model {
 
-        [
-            'id' => 1,
-            'title' => 'laravel developer',
-        'salary' => '1500$',
-        
-        ],
-        [
-            'id' => 2,
-            'title' => 'vue developer',
-        'salary' => '1300$',
-        ],
-        [
-            'id' => 3,
-            'title' => 'react developer',
-        'salary' => '1400$',
-        ]
-];
+    protected $table = 'job_listings';
+     protected $fillable = ['title', 'salary'];
     
-}
+//     public static function all():array
+//      {
+        
+// return  $jobs = [
 
-public static function find(int $id): array
-{
-   $job = Arr::first(static::all(), fn($job) => $job['id'] == $id);
+//         [
+//             'id' => 1,
+//             'title' => 'laravel developer',
+//         'salary' => '1500$',
+        
+//         ],
+//         [
+//             'id' => 2,
+//             'title' => 'vue developer',
+//         'salary' => '1300$',
+//         ],
+//         [
+//             'id' => 3,
+//             'title' => 'react developer',
+//         'salary' => '1400$',
+//         ]
+// ];
+    
+// }
 
-   if (!$job) {
-       abort(404);
-   }
-    return $job;
-}
+// public static function find(int $id): array
+// {
+//    $job = Arr::first(static::all(), fn($job) => $job['id'] == $id);
+
+//    if (!$job) {
+//        abort(404);
+//    }
+//     return $job;
+// }
 }
