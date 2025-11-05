@@ -8,10 +8,8 @@ use App\Models\Job;
 
 
 Route::get('/', function () {
-   $job = Job::all();
-
-   dd($job);
-    // return view('welcome');
+  
+    return view('welcome');
 });
 
 Route::get('/jobs', function () {
